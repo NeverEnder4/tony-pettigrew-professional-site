@@ -10,8 +10,10 @@ $color-white: #efefef;
 $font-size-xs: 1.2rem;
 $font-size-sm: 1.8rem;
 $font-size-md: 2.5rem;
+$font-size-xm: 3.5rem;
 $font-size-lg: 4rem;
 $font-size-xl: 7.2rem;
+$font-size-xxl: 9rem;
 
 // font weights
 $font-weight-regular: 400;
@@ -21,3 +23,15 @@ $font-weight-black: 900;
 
 // font family
 $font-family-rubik: 'Rubik', 'Helvetica', 'Sans-Serif';
+
+// landing page border
+$landing-border: 4px solid $color-black;
+
+// mixins
+
+@mixin font-style($size, $color) {
+  font-family: $font-family-rubik;
+  font-weight: $font-weight-bold;
+  font-size: $size;
+  color: $color;
+}

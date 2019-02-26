@@ -1,0 +1,24 @@
+@import '../../scss/abstractions/abstractions';
+
+.high-light-link {
+  @include font-style($font-size-xm, $color-black);
+  backface-visibility: hidden;
+  text-decoration: none;
+  position: relative;
+  transform-origin: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 102%;
+    height: 70%;
+    background-color: $color-secondary;
+    left: 1px;
+    top: 15px;
+    z-index: -1;
+  }
+  &:hover,
+  &:focus {
+    transform: rotate(-10deg);
+  }
+}
