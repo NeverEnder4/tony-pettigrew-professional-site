@@ -1,0 +1,38 @@
+@import '../abstractions/abstractions';
+
+body {
+  background-color: $color-primary;
+}
+
+.headline {
+  color: $color-black;
+  font-family: $font-family-rubik;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-xl;
+  margin: 2px 0 2px 5px;
+}
+
+.headline-scaffold {
+  display: flex;
+  flex-direction: column;
+  width: 355px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 140px;
+  position: absolute;
+  left: 170px;
+  top: -25px;
+}
+
+.headline-row {
+  border-left: 4px solid $color-black;
+  border-top: 4px solid $color-black;
+  border-right: 4px solid $color-black;
+  display: flex;
+  &:last-child {
+    position: relative;
+    border-bottom: 4px solid $color-black;
+  }
+}

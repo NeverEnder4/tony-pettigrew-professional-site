@@ -1,6 +1,8 @@
 import Head from 'next/head';
 
-const HeadWrapper = ({ children }) => {
+import './PageWrapper.scss';
+
+const PageWrapper = ({ children }) => {
   return (
     <div>
       <Head>
@@ -17,9 +19,9 @@ const HeadWrapper = ({ children }) => {
           rel="stylesheet"
         />
       </Head>
-      {children}
+      <div className="wrapper">{children}</div>
     </div>
   );
 };
 
-export default HeadWrapper;
+export default PageWrapper;
