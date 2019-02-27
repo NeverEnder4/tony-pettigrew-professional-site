@@ -14,6 +14,9 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.4.9",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.10.0",
+    "jest": "^24.1.0",
     "postcss": "^7.0.14"
   },
   "browserslist": [
@@ -21,7 +24,9 @@
     "> 1%"
   ],
   "scripts": {
-    "dev": "next"
+    "dev": "next",
+    "test": "jest --watch --verbose --setupTestFrameworkScriptFile=./tests/setup.js",
+    "coverage": "jest --coverage --setupTestFrameworkScriptFile=./tests/setup.js"
   },
   "author": "Tony Pettigrew",
   "license": "ISC"
