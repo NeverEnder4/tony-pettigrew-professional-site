@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HighLightLink component renders props and matches snapshot 1`] = `
+<a
+  className="high-light-link"
+  href="/href"
+  rel="noreferrer"
+>
+  text
+</a>
+`;
