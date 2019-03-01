@@ -1,0 +1,79 @@
+.icon {
+  position: absolute;
+  // visibility: hidden;
+  &.champagne {
+    width: 120px;
+    left: 50vw;
+    top: -22px;
+  }
+
+  &.smiley-face,
+  &.rocket {
+    width: 55px;
+    left: 57vw;
+    top: 10px;
+  }
+
+  .graph {
+    width: 55px;
+    left: 58vw;
+    top: 10px;
+  }
+
+  &.sapling {
+    width: 55px;
+    left: 58vw;
+    top: 12px;
+  }
+
+  @media (min-width: 375px) {
+    &.champagne {
+      width: 140px;
+      left: 183px;
+      top: -25px;
+    }
+    &.smiley-face,
+    &.rocket {
+      width: 70px;
+      top: 8px;
+      left: 210px;
+    }
+
+    &.sapling {
+      width: 70px;
+      top: 14px;
+      left: 210px;
+    }
+
+    &.graph {
+      width: 65px;
+      top: 12px;
+      left: 215px;
+    }
+  }
+  @media (min-width: 1280px) {
+    &.champagne {
+      width: 175px;
+      left: 220px;
+      top: -32px;
+    }
+    &.smiley-face,
+    &.rocket {
+      width: 85px;
+      top: 12px;
+      left: 260px;
+    }
+
+    &.sapling {
+      width: 85px;
+      top: 18px;
+      left: 260px;
+    }
+
+    &.graph {
+      width: 80px;
+      top: 16px;
+      left: 265px;
+    }
+  }
+}
