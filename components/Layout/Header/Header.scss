@@ -1,0 +1,32 @@
+@import '../../../scss/abstractions/abstractions';
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: $color-black;
+  height: 50px;
+  padding: 0 1.5rem;
+  & *:not(:last-child) {
+    margin-right: 1rem;
+  }
+}
+
+.home-link {
+  text-decoration: none;
+  color: $color-black;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-bold;
+  font-family: $font-family-karla;
+}
+
+.divider {
+  display: block;
+  height: 22.5px;
+  width: 1px;
+  background-color: $color-black;
+}
+
+.menu-icon {
+  cursor: pointer;
+}

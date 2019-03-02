@@ -10,9 +10,14 @@ const LowerLanding = ({
   mouseDownOnSphereClass,
 }) => (
   <React.Fragment>
-    <div onMouseUp={onSphereMouseUpHandler} className="landing-lower-section">
+    <div
+      onMouseUp={onSphereMouseUpHandler}
+      onTouchEnd={onSphereMouseUpHandler}
+      className="landing-lower-section"
+    >
       <div
         onMouseDown={onSphereMouseDownHandler}
+        onTouchStart={onSphereMouseDownHandler}
         className={`${mouseDownOnSphereClass} vertical-line`}
       >
         <nav className="landing-nav">
