@@ -6,6 +6,12 @@
   align-items: center;
   height: 50px;
 
+  & img {
+    @media (min-width: 475px) {
+      width: 4rem;
+    }
+  }
+
   & a {
     display: flex;
     align-items: center;
@@ -16,6 +22,10 @@
     padding-top: 5px;
     transition: all 100ms cubic-bezier(0.47, 0, 0.745, 0.715);
 
+    @media (min-width: 475px) {
+      font-size: $font-size-xm;
+    }
+
     & *:not(:last-child) {
       margin-right: 0.7rem;
     }
@@ -24,7 +34,6 @@
       // text-decoration: line-through;
       color: $color-secondary;
       outline: none;
-      border-top: 1px solid $color-white;
     }
   }
 }

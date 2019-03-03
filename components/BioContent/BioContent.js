@@ -4,11 +4,10 @@ import './BioContent.scss';
 
 const BioContent = () => (
   <React.Fragment>
-    <h1 className="greeting">Hi,</h1>
     <p className="bio-paragraph">
-      {' '}
-      my name is <span className="emphasized-text">Tony Pettigrew</span> I'm a
-      web developer specializing in full stack{' '}
+      <span className="greeting">Hi,</span> my name is{' '}
+      <span className="emphasized-text">Tony Pettigrew</span> I'm a web
+      developer specializing in full stack{' '}
       <span className="emphasized-text">JavaScript</span>
     </p>
     <p className="bio-paragraph">

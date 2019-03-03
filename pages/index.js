@@ -23,6 +23,10 @@ class index extends React.Component {
     this.cycleIconsAtInterval(4000, iconArray);
   }
 
+  componentWillUnmount() {
+    clearInterval(this.cycleIconsAtInterval);
+  }
+
   // loop the index back to 0 if it is the terminal index
   loopIndex(array, index) {
     // validate arguments
