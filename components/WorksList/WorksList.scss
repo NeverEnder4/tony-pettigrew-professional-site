@@ -1,0 +1,33 @@
+@import '../../scss/abstractions/abstractions';
+
+.works-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  right: 2rem;
+  width: calc(100vw - 1rem);
+  background: url('/static/png/bg-gradient.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.title-offset {
+  display: block;
+  position: absolute;
+  top: -0.5rem;
+  right: 3.4rem;
+  transform-origin: right top;
+  transform: rotate(-90deg);
+}
+
+.works-title {
+  margin: 0;
+  font-weight: $font-weight-bold;
+  color: $color-primary;
+  font-size: $font-size-lg;
+}
+
+.works-gallery {
+  margin-top: 4.5rem;
+}

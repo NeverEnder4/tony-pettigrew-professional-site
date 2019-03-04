@@ -5,6 +5,8 @@
   justify-content: center;
   align-items: center;
   height: 50px;
+  padding: 1rem;
+  background-color: $color-primary;
 
   @media (min-width: 1200px) {
     align-self: center;
@@ -21,7 +23,7 @@
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: $color-black;
+    color: $color-white;
     font-size: $font-size-md;
     font-weight: $font-weight-medium;
     padding-top: 5px;
