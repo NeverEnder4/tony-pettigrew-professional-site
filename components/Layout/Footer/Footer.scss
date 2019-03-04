@@ -6,6 +6,11 @@
   align-items: center;
   height: 50px;
 
+  @media (min-width: 1200px) {
+    align-self: center;
+    z-index: 100;
+  }
+
   & img {
     @media (min-width: 475px) {
       width: 4rem;

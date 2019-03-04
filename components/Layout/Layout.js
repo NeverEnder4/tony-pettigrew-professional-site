@@ -10,8 +10,49 @@ class Layout extends React.Component {
     super(props);
     this.state = {
       menuOpen: false,
+      innerWidth: 0,
+    };
+    this._windowResizeHandler = e => {
+      const innerWidth = e.target.innerWidth;
+      this.setState(() => ({
+        innerWidth,
+      }));
+      this.adjustMenuAtWidth(this.state.innerWidth);
     };
   }
+
+  componentDidMount() {
+    window.addEventListener(
+      'resize',
+      this.debounce(this._windowResizeHandler, 25),
+    );
+    this.adjustMenuAtWidth(window.innerWidth);
+  }
+
+  adjustMenuAtWidth = width => {
+    const { menuOpen } = this.state;
+    if (width >= 1200 && !menuOpen) {
+      this.setState(prevState => ({
+        menuOpen: !prevState.menuOpen,
+      }));
+    }
+
+    if (width < 1200 && menuOpen) {
+      this.setState(prevState => ({
+        menuOpen: !prevState.menuOpen,
+      }));
+    }
+  };
+
+  debounce = (fn, time) => {
+    let timeout;
+
+    return function() {
+      const functionCall = () => fn.apply(this, arguments);
+      clearTimeout(timeout);
+      timeout = setTimeout(functionCall, time);
+    };
+  };
 
   menuButtonClickHandler = e => {
     if (e.target.classList.contains('screen-cover') && this.state.menuOpen) {
@@ -30,12 +71,17 @@ class Layout extends React.Component {
   render() {
     const { menuOpen } = this.state;
     const { children } = this.props;
+    const footerComponent = <Footer />;
     return (
       <div className="layout" onClick={this.menuButtonClickHandler}>
-        <Header menuButtonClickHandler={this.menuButtonClickHandler} />
-        <ContentWrapper>{children}</ContentWrapper>
+        <Header
+          menuOpen={menuOpen}
+          menuButtonClickHandler={this.menuButtonClickHandler}
+        />
+        <ContentWrapper footerComponent={footerComponent}>
+          {children}
+        </ContentWrapper>
         <Menu isOpen={menuOpen} />
-        <Footer />
       </div>
     );
   }

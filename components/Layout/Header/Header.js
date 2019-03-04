@@ -1,18 +1,14 @@
 import Link from 'next/link';
-
+import MenuIcon from './MenuIcon/MenuIcon';
 import './Header.scss';
 
-const Header = () => (
+const Header = ({ menuOpen }) => (
   <header className="header">
     <Link href="/">
       <a className="home-link">home</a>
     </Link>
     <span className="divider" />
-    <img
-      src="/static/svg/sphere-icon.svg"
-      alt="menu icon"
-      className="menu-icon"
-    />
+    <MenuIcon isActive={menuOpen} />
   </header>
 );
 

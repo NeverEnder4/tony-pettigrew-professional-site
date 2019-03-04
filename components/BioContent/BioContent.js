@@ -2,8 +2,8 @@ import Link from 'next/link';
 
 import './BioContent.scss';
 
-const BioContent = () => (
-  <React.Fragment>
+const BioContent = ({ footerComponent }) => (
+  <section className="bio-content">
     <p className="bio-paragraph">
       <span className="greeting">Hi,</span> my name is{' '}
       <span className="emphasized-text">Tony Pettigrew</span> I'm a web
@@ -24,7 +24,8 @@ const BioContent = () => (
         <a className="white-link">blog</a>
       </Link>
     </p>
-  </React.Fragment>
+    {footerComponent}
+  </section>
 );
 
 export default BioContent;

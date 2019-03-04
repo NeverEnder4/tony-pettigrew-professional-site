@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+import MenuLogoContainer from './MenuLogoContainer/MenuLogoContainer';
+
 import './Menu.scss';
 
 const Menu = ({ isOpen }) => {
@@ -10,15 +12,11 @@ const Menu = ({ isOpen }) => {
       <div className={`menu ${activeClass}`}>
         <Link href="/">
           <a>
-            <img
-              src="/static/svg/menu-logo.svg"
-              alt="T P"
-              className="menu-logo"
-            />
+            <MenuLogoContainer menuOpen={isOpen} />
           </a>
         </Link>
         <nav className="nav-menu">
-          <ul>
+          <ul className={`${activeClass}`}>
             <li>
               <Link href="/biographique">
                 <a className="nav-link">Biographique</a>

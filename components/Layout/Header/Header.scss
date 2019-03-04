@@ -10,7 +10,7 @@
   & *:not(:last-child) {
     margin-right: 1rem;
   }
-  @media (min-width: 1280px) {
+  @media (min-width: 1200px) {
     display: none;
   }
 }
@@ -28,9 +28,4 @@
   height: 22.5px;
   width: 1px;
   background-color: $color-black;
-}
-
-.menu-icon {
-  cursor: pointer;
-  z-index: 200;
 }
