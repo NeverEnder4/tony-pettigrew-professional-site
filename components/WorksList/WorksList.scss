@@ -22,12 +22,27 @@
   top: -0.5rem;
   right: 3.4rem;
   transform-origin: right top;
-  transform: rotate(-90deg);
+  transform: rotate(-90deg) translateY(100%);
+  opacity: 0;
+  animation: slide-in-right 200ms cubic-bezier(0.455, 0.03, 0.515, 0.955)
+    forwards 300ms;
 
   @media (min-width: 1200px) {
     position: fixed;
     top: 5rem;
     right: 41.3rem;
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translate(100%) rotate(-90deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0) rotate(-90deg);
   }
 }
 
