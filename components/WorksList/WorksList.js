@@ -12,7 +12,7 @@ const WorksList = ({ footerComponent }) => (
       </span>
       <ul className="works-gallery">
         {itemsArray.map(item => (
-          <WorksItem item={item} />
+          <WorksItem key={item.title} item={item} />
         ))}
       </ul>
     </div>

@@ -6,10 +6,14 @@
   align-items: center;
   position: relative;
   right: 2rem;
-  width: calc(100vw - 1rem);
+  width: calc(100vw - 1.7rem);
   background: url('/static/png/bg-gradient.png');
   background-repeat: no-repeat;
   background-size: cover;
+  @media (min-width: 1200px) {
+    width: 100%;
+    right: 2rem;
+  }
 }
 
 .title-offset {
@@ -19,6 +23,12 @@
   right: 3.4rem;
   transform-origin: right top;
   transform: rotate(-90deg);
+
+  @media (min-width: 1200px) {
+    position: fixed;
+    top: 5rem;
+    right: 41.3rem;
+  }
 }
 
 .works-title {
@@ -26,6 +36,10 @@
   font-weight: $font-weight-bold;
   color: $color-primary;
   font-size: $font-size-lg;
+  @media (min-width: 1200px) {
+    color: $color-secondary;
+    font-size: 6rem;
+  }
 }
 
 .works-gallery {
