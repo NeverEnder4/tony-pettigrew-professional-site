@@ -31,7 +31,7 @@ const Menu = ({ currPage, isOpen }) => {
                         alt="right arrow icon"
                       />
                       <Link href={page.href}>
-                        <a className="nav-link">{page.name}</a>
+                        <a className={`nav-link ${activeClass}`}>{page.name}</a>
                       </Link>
                     </li>
                   ) : (

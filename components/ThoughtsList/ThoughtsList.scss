@@ -1,0 +1,43 @@
+@import '../../scss//abstractions/abstractions';
+
+.thoughts-list-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & .title {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 5rem;
+    & h1 {
+      position: absolute;
+      top: -3rem;
+      left: 1rem;
+      color: $color-white;
+      font-weight: $font-weight-bold;
+      font-size: $font-size-xm;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    & img {
+      position: absolute;
+      bottom: -6.5rem;
+      right: 1rem;
+    }
+
+    & .white-bar {
+      position: relative;
+      width: 250px;
+      height: 22px;
+      background-color: $color-white;
+    }
+  }
+
+  & .thoughts-list {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

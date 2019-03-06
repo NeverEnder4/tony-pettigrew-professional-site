@@ -1,0 +1,56 @@
+@import '../../../scss/abstractions/abstractions';
+
+.thoughts-item {
+  width: 31.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & .title {
+    box-sizing: border-box;
+    color: $color-white;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-black;
+    padding: 0.5rem 1rem;
+    transition: background-color 100ms cubic-bezier(0.47, 0, 0.745, 0.715);
+
+    &:hover,
+    &:focus {
+      background-color: $color-secondary;
+    }
+  }
+  & h2 {
+    font-weight: $font-weight-medium;
+    font-size: $font-size-md;
+    margin: 0 0 2px 0;
+  }
+
+  & h3 {
+    font-weight: $font-weight-medium;
+    font-size: $font-size-xs;
+    margin: 7px 0 2px 0;
+  }
+
+  span {
+    height: 2px;
+    background-color: $color-white;
+    width: 100%;
+  }
+
+  p {
+    width: 28.7rem;
+    font-weight: $font-weight-medium;
+    font-size: $font-size-sm;
+    line-height: 160%;
+    margin-top: 7px;
+    & .tag-link {
+      color: $color-white;
+      transition: color 100ms cubic-bezier(0.47, 0, 0.745, 0.715);
+      &:hover,
+      &:focus {
+        color: $color-secondary;
+      }
+    }
+  }
+}

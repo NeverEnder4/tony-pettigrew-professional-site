@@ -5,7 +5,6 @@ import '../scss/global/_global.scss';
 import '../scss/pages/biographique.scss';
 
 const biographique = ({ currPage }) => {
-  console.log(currPage);
   return (
     <Layout currPage={currPage}>
       <BioContent />
