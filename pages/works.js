@@ -3,10 +3,12 @@ import WorksList from '../components/WorksList/WorksList';
 
 import '../scss/pages/works.scss';
 
-const works = () => (
-  <Layout>
+const works = ({ currPage }) => (
+  <Layout currPage={currPage}>
     <WorksList />
   </Layout>
 );
+
+works.getInitialProps = ({ pathname }) => ({ currPage: pathname });
 
 export default works;

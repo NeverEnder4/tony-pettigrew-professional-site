@@ -70,7 +70,7 @@ class Layout extends React.Component {
 
   render() {
     const { menuOpen } = this.state;
-    const { children } = this.props;
+    const { children, currPage } = this.props;
     const footerComponent = <Footer />;
     return (
       <div className="layout" onClick={this.menuButtonClickHandler}>
@@ -81,7 +81,7 @@ class Layout extends React.Component {
         <ContentWrapper footerComponent={footerComponent}>
           {children}
         </ContentWrapper>
-        <Menu isOpen={menuOpen} />
+        <Menu currPage={currPage} isOpen={menuOpen} />
       </div>
     );
   }

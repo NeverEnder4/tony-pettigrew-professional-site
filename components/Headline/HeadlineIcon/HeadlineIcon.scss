@@ -2,33 +2,32 @@
   position: absolute;
   // visibility: hidden;
   &.champagne {
-    width: 120px;
-    left: 50vw;
-    top: -22px;
+    width: 140px;
+    left: 45vw;
+    top: -32px;
   }
 
   &.smiley-face,
   &.rocket {
-    width: 55px;
-    left: 57vw;
-    top: 10px;
+    width: 65px;
+    left: 54vw;
+    top: 5px;
   }
 
   .graph {
-    width: 55px;
-    left: 58vw;
-    top: 10px;
+    width: 60px;
+    left: 54vw;
+    top: 8px;
   }
 
   &.sapling {
-    width: 55px;
-    left: 58vw;
-    top: 12px;
+    width: 70px;
+    left: 54vw;
+    top: 8px;
   }
 
   @media (min-width: 375px) {
     &.champagne {
-      width: 140px;
       left: 183px;
       top: -25px;
     }
@@ -40,7 +39,6 @@
     }
 
     &.sapling {
-      width: 70px;
       top: 14px;
       left: 210px;
     }
