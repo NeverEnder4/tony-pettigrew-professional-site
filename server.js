@@ -1,8 +1,10 @@
 const express = require('express');
 const next = require('next');
+require('dotenv').config();
 const helmet = require('helmet');
 const morgan = require('morgan');
-const butter = require('buttercms')('d3486499153479e9dd7ea4205b964a53ea1cb0f5');
+const butter = require('buttercms')(process.env.BUTTER_API_KEY);
+const fetch = require('isomorphic-unfetch');
 
 const thoughts = require('./controllers/thoughts');
 
@@ -21,6 +23,10 @@ nextApp.prepare().then(() => {
 
   app.get('/posts/all', (req, res) => {
     thoughts.getAllPosts(res, butter);
+  });
+
+  app.get('/post/:slug', (req, res) => {
+    thoughts.getSinglePost(req, res, fetch);
   });
 
   app.get('*', (req, res) => {

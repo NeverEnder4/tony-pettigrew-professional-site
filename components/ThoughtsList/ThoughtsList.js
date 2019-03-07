@@ -3,8 +3,6 @@ import ThoughtsIcon from './ThoughtsIcon/ThoughtsIcon';
 
 import './ThoughtsList.scss';
 
-import thoughtsArray from '../../static/seed-data/thoughts';
-
 const ThoughtsList = ({ footerComponent, thoughts }) => {
   return (
     <section className="thoughts-list-content">
@@ -16,7 +14,9 @@ const ThoughtsList = ({ footerComponent, thoughts }) => {
       </div>
       <ul className="thoughts-list">
         {thoughts
-          ? thoughts.map(thought => <ThoughtsItem thought={thought} />)
+          ? thoughts.map(thought => (
+              <ThoughtsItem key={thought.slug} thought={thought} />
+            ))
           : 'Loading...'}
       </ul>
       {footerComponent}

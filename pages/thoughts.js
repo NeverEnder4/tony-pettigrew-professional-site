@@ -9,7 +9,6 @@ import api from '../api/api';
 import '../scss/pages/thoughts.scss';
 
 const thoughts = ({ currPage, thoughts }) => {
-  console.log(thoughts[1]);
   return (
     <Layout currPage={currPage}>
       <ThoughtsList thoughts={thoughts} />

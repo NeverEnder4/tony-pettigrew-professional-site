@@ -1,0 +1,13 @@
+@import '../../scss/abstractions/abstractions';
+
+.thought-post {
+  & .content {
+    position: relative;
+    height: 200vh;
+    background: url('/static/png/bg-gradient.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    right: 2.5rem;
+  }
+}
