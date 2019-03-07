@@ -23,7 +23,7 @@ const thoughtsArray = [
     title: 'Two Ways To setState',
     date: 'The 27th of Dev, 2018',
     description:
-      'There are two ways to call this.setState( ) in React which result in deifferent state updates.',
+      'There are two ways to call setState( ) in React which result in deifferent state updates.',
     tag: 'React',
   },
 ];

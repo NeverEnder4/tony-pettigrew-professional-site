@@ -1,27 +1,27 @@
 import ThoughtsItem from './ThoughtsItem/ThoughtsItem';
+import ThoughtsIcon from './ThoughtsIcon/ThoughtsIcon';
 
 import './ThoughtsList.scss';
 
 import thoughtsArray from '../../static/seed-data/thoughts';
 
-const ThoughtsList = ({ footerComponent }) => (
-  <section className="thoughts-list-content">
-    <div className="title">
-      <span className="white-bar">
-        <h1>Thoughts</h1>
-        <img
-          src="/static/svg/brain.svg"
-          alt="brain with lightning bolts shooting out of the top"
-        />
-      </span>
-    </div>
-    <ul className="thoughts-list">
-      {thoughtsArray.map(thought => (
-        <ThoughtsItem key={thought.title} thought={thought} />
-      ))}
-    </ul>
-    {footerComponent}
-  </section>
-);
+const ThoughtsList = ({ footerComponent, thoughts }) => {
+  return (
+    <section className="thoughts-list-content">
+      <div className="section-title">
+        <span className="white-bar">
+          <h1>Thoughts</h1>
+          <ThoughtsIcon />
+        </span>
+      </div>
+      <ul className="thoughts-list">
+        {thoughts
+          ? thoughts.map(thought => <ThoughtsItem thought={thought} />)
+          : 'Loading...'}
+      </ul>
+      {footerComponent}
+    </section>
+  );
+};
 
 export default ThoughtsList;
