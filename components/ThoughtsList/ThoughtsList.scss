@@ -1,64 +1,84 @@
 @import '../../scss//abstractions/abstractions';
 
 .thoughts-list-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: relative;
+  width: calc(100vw - 1.7rem);
+
   @media (min-width: 1200px) {
-    margin-top: 5rem;
+    width: 100%;
+    right: 2rem;
   }
 
-  & .section-title {
-    margin-top: 6rem;
+  .section-title {
     display: flex;
     justify-content: flex-end;
-    position: relative;
-    left: 2rem;
-    align-self: flex-end;
-    & h1 {
-      position: absolute;
-      top: -3rem;
-      left: 0.5rem;
-      font-weight: $font-weight-bold;
-      font-size: $font-size-xm;
-      margin: 0;
-      opacity: 0;
-      transform: translateY(-30px);
-      animation: slide-up-title 200ms cubic-bezier(0.47, 0, 0.745, 0.715)
-        forwards 400ms;
+    margin-top: 7rem;
+    @media (min-width: 1200px) {
+      display: block;
+      margin-top: 0;
+    }
+  }
 
-      @keyframes slide-up-title {
-        from {
-          opacity: 0;
-          transform: translateY(-30px);
-        }
-
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
+  .thoughts {
+    & .section-title-bar {
+      display: block;
+      height: 2.2rem;
+      width: 21rem;
+      background-color: $color-secondary;
+      position: relative;
+      transform: scaleX(0);
+      animation: bar-scale-in 100ms cubic-bezier(0.455, 0.03, 0.515, 0.955)
+        200ms forwards;
+      @media (min-width: 1200px) {
+        background-color: transparent;
+        transform: rotate(-90deg) translateY(100%);
+        opacity: 0;
+        transform-origin: right top;
+        position: fixed;
+        top: 20rem;
+        right: 40rem;
+        animation: slide-in-right 200ms cubic-bezier(0.455, 0.03, 0.515, 0.955)
+          forwards 300ms;
       }
     }
-
-    & .white-bar {
-      position: relative;
-      width: 250px;
-      height: 22px;
-      background-color: $color-secondary;
-      transform-origin: left center;
-      transform: scaleX(0);
-      animation: slide-in-bar 200ms cubic-bezier(0.19, 1, 0.22, 1) 200ms
-        forwards;
-
-      @keyframes slide-in-bar {
-        from {
-          transform: scaleX(0);
-        }
-
-        to {
-          transform: scaleX(1);
-        }
+    & .section-title-name {
+      font-weight: $font-weight-bold;
+      font-size: $font-size-xm;
+      position: absolute;
+      top: -5.5rem;
+      left: 0.5rem;
+      opacity: 0;
+      transform: translateY(-40px);
+      animation: title-slide-down 200ms cubic-bezier(0.455, 0.03, 0.515, 0.955)
+        300ms forwards;
+      @media (min-width: 1200px) {
+        position: fixed;
+        font-size: 6rem;
+        color: $color-secondary;
+        text-transform: uppercase;
       }
+    }
+  }
+
+  @keyframes bar-scale-in {
+    from {
+      transform: scaleX(0);
+    }
+
+    to {
+      transform: scaleX(1);
+    }
+  }
+
+  @keyframes title-slide-down {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 

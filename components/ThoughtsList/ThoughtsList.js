@@ -6,10 +6,9 @@ import './ThoughtsList.scss';
 const ThoughtsList = ({ footerComponent, thoughts }) => {
   return (
     <section className="thoughts-list-content">
-      <div className="section-title">
-        <span className="white-bar">
-          <h1>thoughts</h1>
-          <ThoughtsIcon />
+      <div className="section-title thoughts">
+        <span className="section-title-bar">
+          <h1 className="section-title-name">thoughts</h1>
         </span>
       </div>
       <ul className="thoughts-list">

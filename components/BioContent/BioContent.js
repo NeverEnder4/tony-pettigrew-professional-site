@@ -5,7 +5,7 @@ import './BioContent.scss';
 const BioContent = ({ footerComponent }) => (
   <section className="bio-content">
     <div className="section-title">
-      <span className="title-bar">
+      <span className="section-title-bar">
         <h1 className="section-title-name">biographique</h1>
       </span>
     </div>
