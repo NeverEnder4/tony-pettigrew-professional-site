@@ -7,7 +7,7 @@ const ThoughtsItem = ({ thought }) => {
     <li className="thoughts-item">
       <Link
         href={`/thought?slug=${thought.slug}`}
-        // as={`thoughts/${thought.slug}`}
+        as={`thoughts/${thought.slug}`}
       >
         <a className="title">
           <h2>{thought.title}</h2>

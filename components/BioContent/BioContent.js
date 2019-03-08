@@ -4,6 +4,11 @@ import './BioContent.scss';
 
 const BioContent = ({ footerComponent }) => (
   <section className="bio-content">
+    <div className="section-title">
+      <span className="title-bar">
+        <h1 className="section-title-name">biographique</h1>
+      </span>
+    </div>
     <p className="bio-paragraph">
       <span className="greeting">Hi,</span> my name is{' '}
       <span className="emphasized-text">Tony Pettigrew</span> I'm a web

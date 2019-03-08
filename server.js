@@ -10,30 +10,34 @@ const thoughts = require('./controllers/thoughts');
 
 const dev = process.env.NODE_ENV !== 'production';
 const port = process.env.port || 3000;
-const nextApp = next({ dev });
-const handle = nextApp.getRequestHandler();
+const app = next({ dev });
+const handle = app.getRequestHandler();
 
-nextApp.prepare().then(() => {
-  const app = express();
+app.prepare().then(() => {
+  const server = express();
 
-  app.use(helmet());
-  app.use(morgan('dev'));
-  app.use(express.urlencoded({ extended: true }));
-  app.use(express.json());
+  server.use(helmet());
+  server.use(morgan('dev'));
+  server.use(express.urlencoded({ extended: true }));
+  server.use(express.json());
 
-  app.get('/posts/all', (req, res) => {
+  server.get('/posts/all', (req, res) => {
     thoughts.getAllPosts(res, butter);
   });
 
-  app.get('/post/:slug', (req, res) => {
+  server.get('/thoughts/:slug', (req, res) => {
+    return app.render(req, res, '/thought', { slug: req.params.slug });
+  });
+
+  server.get('/post/:slug', (req, res) => {
     thoughts.getSinglePost(req, res, fetch);
   });
 
-  app.get('*', (req, res) => {
+  server.get('*', (req, res) => {
     return handle(req, res);
   });
 
-  app.listen(port, err => {
+  server.listen(port, err => {
     if (err) throw err;
     console.log(`Listening on PORT ${port}`);
   });

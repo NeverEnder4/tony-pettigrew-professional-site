@@ -8,7 +8,7 @@ const ThoughtsList = ({ footerComponent, thoughts }) => {
     <section className="thoughts-list-content">
       <div className="section-title">
         <span className="white-bar">
-          <h1>Thoughts</h1>
+          <h1>thoughts</h1>
           <ThoughtsIcon />
         </span>
       </div>

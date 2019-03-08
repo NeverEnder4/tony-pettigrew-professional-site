@@ -9,39 +9,28 @@
   }
 
   & .section-title {
+    margin-top: 6rem;
     display: flex;
     justify-content: flex-end;
-    width: 100%;
-    margin-top: 5rem;
-    @media (min-width: 550px) {
-      justify-content: center;
-    }
+    position: relative;
+    left: 2rem;
+    align-self: flex-end;
     & h1 {
       position: absolute;
       top: -3rem;
-      left: 1rem;
-      color: $color-white;
+      left: 0.5rem;
       font-weight: $font-weight-bold;
       font-size: $font-size-xm;
-      text-transform: uppercase;
       margin: 0;
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(-30px);
       animation: slide-up-title 200ms cubic-bezier(0.47, 0, 0.745, 0.715)
         forwards 400ms;
 
-      @media (min-width: 550px) {
-        font-size: $font-size-lg;
-        top: -3.5rem;
-      }
-      @media (min-width: 1200px) {
-        font-size: 6rem;
-        top: -5.3rem;
-      }
       @keyframes slide-up-title {
         from {
           opacity: 0;
-          transform: translateY(30px);
+          transform: translateY(-30px);
         }
 
         to {
@@ -55,18 +44,11 @@
       position: relative;
       width: 250px;
       height: 22px;
-      background-color: $color-white;
+      background-color: $color-secondary;
       transform-origin: left center;
       transform: scaleX(0);
       animation: slide-in-bar 200ms cubic-bezier(0.19, 1, 0.22, 1) 200ms
         forwards;
-      @media (min-width: 550px) {
-        height: 27px;
-      }
-      @media (min-width: 1200px) {
-        width: 350px;
-        height: 34px;
-      }
 
       @keyframes slide-in-bar {
         from {
@@ -81,7 +63,7 @@
   }
 
   & .thoughts-list {
-    margin-top: 18vh;
+    margin-top: 12vh;
     display: flex;
     flex-direction: column;
     align-items: center;
