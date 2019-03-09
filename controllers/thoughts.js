@@ -13,7 +13,7 @@ const getSinglePost = (req, res, fetch) => {
   fetch(url + collection + apiKey)
     .then(response => response.json())
     .then(data => {
-      const post = data.data.thoughts;
+      const post = data;
       res.json(post);
     })
     .catch(err => console.log(err));

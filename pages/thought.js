@@ -16,13 +16,13 @@ const thought = ({ thought }) => {
 
 thought.getInitialProps = async ({ query }) => {
   const { slug } = query;
-
   const response = await api.getData(
     `http://localhost:3000/post/${slug}`,
     fetch,
   );
+
   return {
-    thought: response,
+    thought: response.thoughts[0],
   };
 };
 

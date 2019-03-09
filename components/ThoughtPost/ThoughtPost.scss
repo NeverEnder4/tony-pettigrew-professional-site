@@ -1,13 +1,97 @@
 @import '../../scss/abstractions/abstractions';
 
 .thought-post {
-  & .content {
-    position: relative;
-    height: 200vh;
-    background: url('/static/png/bg-gradient.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100vw;
-    right: 2rem;
+  position: relative;
+  background: url('/static/png/bg-gradient.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  right: 2rem;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
   }
+
+  &__title-container {
+    padding: 0 2rem;
+    @media (min-width: 800px) {
+      max-width: 800px;
+    }
+  }
+
+  &__title {
+    font-size: 3.5rem;
+    font-weight: $font-weight-black;
+    margin: 5rem 0 0 0;
+  }
+  &__date {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-medium;
+    color: $color-gray;
+    padding: 0.5rem;
+  }
+  &__navigation {
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 0;
+    @media (min-width: 800px) {
+      max-width: 800px;
+    }
+  }
+  &__nav-link {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+
+    &-text {
+      font-family: $font-family-karla;
+      font-weight: $font-weight-bold;
+      font-size: $font-size-sm;
+      color: $color-black;
+      margin-bottom: 1rem;
+    }
+  }
+
+  & .content {
+    padding: 0 2rem;
+    @media (min-width: 800px) {
+      max-width: 800px;
+    }
+
+    h2 {
+      color: $color-primary;
+      font-size: $font-size-md;
+      font-weight: $font-weight-medium;
+      margin: 0 0 0.7rem 0;
+      @media (min-width: 1200px) {
+        margin: 0 0 1.2rem 0;
+      }
+    }
+
+    p {
+      margin: 0 0 3rem 0;
+      font-family: $font-family-karla;
+      font-size: $font-size-sm;
+      font-weight: $font-weight-regular;
+      line-height: 130%;
+      letter-spacing: 0.5px;
+      @media (min-width: 1200px) {
+        margin: 0 0 4.5rem 0;
+      }
+    }
+
+    img {
+      width: 100%;
+      display: block;
+      @media (min-width: 390px) {
+        width: initial;
+      }
+    }
+  }
+}
+
+.thought-post-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
 }

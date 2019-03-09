@@ -36,14 +36,12 @@ class Layout extends React.Component {
     if (width >= 1200 && !menuOpen) {
       this.setState(prevState => ({
         menuOpen: !prevState.menuOpen,
-        fullScreenMenu: true,
       }));
     }
 
     if (width < 1200 && menuOpen) {
       this.setState(prevState => ({
         menuOpen: !prevState.menuOpen,
-        fullScreenMenu: false,
       }));
     }
 

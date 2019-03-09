@@ -15,7 +15,7 @@ const Footer = ({ contactClickHandler, contactOpen }) => {
             <img
               src="/static/svg/github.svg"
               alt="github icon"
-              className="contact-icon"
+              className="contact-icon github"
             />
           </a>
         </li>
@@ -24,7 +24,7 @@ const Footer = ({ contactClickHandler, contactOpen }) => {
             <img
               src="/static/svg/linkedin.svg"
               alt="linkedin icon"
-              className="contact-icon"
+              className="contact-icon linkedin"
             />
           </a>
         </li>
@@ -33,7 +33,7 @@ const Footer = ({ contactClickHandler, contactOpen }) => {
             <img
               src="/static/svg/twitter.svg"
               alt="twitter icon"
-              className="contact-icon"
+              className="contact-icon twitter"
             />
           </a>
         </li>
