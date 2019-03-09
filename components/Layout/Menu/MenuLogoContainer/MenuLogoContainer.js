@@ -1,7 +1,8 @@
 import './MenuLogoContainer.scss';
 
-const MenuLogoContainer = ({ menuOpen }) => {
+const MenuLogoContainer = ({ menuOpen, fullScreenMenu }) => {
   const activeClass = menuOpen ? 'active' : '';
+  const cancelAnimationClass = fullScreenMenu ? 'cancel-animation' : '';
 
   return (
     <svg
@@ -34,7 +35,7 @@ const MenuLogoContainer = ({ menuOpen }) => {
         rx="6"
         stroke="#FF0000"
         strokeWidth="8"
-        className={`rect-red rectangle ${activeClass}`}
+        className={`rect-red rectangle ${activeClass} ${cancelAnimationClass}`}
       />
       <rect
         x="114"
@@ -42,7 +43,7 @@ const MenuLogoContainer = ({ menuOpen }) => {
         width="102.309"
         height="102.309"
         rx="6"
-        className={`rect-black rectangle ${activeClass}`}
+        className={`rect-black rectangle ${activeClass} ${cancelAnimationClass}`}
         stroke="#1D1D1D"
         strokeWidth="8"
       />

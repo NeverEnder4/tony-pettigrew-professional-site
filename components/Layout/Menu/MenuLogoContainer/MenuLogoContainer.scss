@@ -1,5 +1,5 @@
 .menu .menu-logo-container {
-  margin-bottom: -2rem;
+  margin-bottom: -7vh;
 }
 
 .rect-red {
@@ -10,6 +10,10 @@
 
   &.active {
     animation: draw-in 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards 500ms;
+    &.cancel-animation {
+      animation: none;
+      stroke-dashoffset: 0;
+    }
   }
 }
 
@@ -21,6 +25,10 @@
 
   &.active {
     animation: draw-in 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards 250ms;
+    &.cancel-animation {
+      animation: none;
+      stroke-dashoffset: 0;
+    }
   }
 }
 

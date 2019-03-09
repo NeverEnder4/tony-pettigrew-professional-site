@@ -10,7 +10,9 @@ class Layout extends React.Component {
     super(props);
     this.state = {
       menuOpen: false,
+      fullScreenMenu: false,
       innerWidth: 0,
+      contactOpen: false,
     };
     this._windowResizeHandler = e => {
       const innerWidth = e.target.innerWidth;
@@ -34,13 +36,23 @@ class Layout extends React.Component {
     if (width >= 1200 && !menuOpen) {
       this.setState(prevState => ({
         menuOpen: !prevState.menuOpen,
+        fullScreenMenu: true,
       }));
     }
 
     if (width < 1200 && menuOpen) {
       this.setState(prevState => ({
         menuOpen: !prevState.menuOpen,
+        fullScreenMenu: false,
       }));
+    }
+
+    if (width >= 1200) {
+      this.setState({ fullScreenMenu: true });
+    }
+
+    if (width < 1200) {
+      this.setState({ fullScreenMenu: false });
     }
   };
 
@@ -68,10 +80,19 @@ class Layout extends React.Component {
     }
   };
 
+  contactClickHandler = () => {
+    this.setState(prevState => ({ contactOpen: !prevState.contactOpen }));
+  };
+
   render() {
-    const { menuOpen } = this.state;
+    const { menuOpen, fullScreenMenu, contactOpen } = this.state;
     const { children, currPage } = this.props;
-    const footerComponent = <Footer />;
+    const footerComponent = (
+      <Footer
+        contactClickHandler={this.contactClickHandler}
+        contactOpen={contactOpen}
+      />
+    );
     return (
       <div className="layout" onClick={this.menuButtonClickHandler}>
         <Header
@@ -81,7 +102,11 @@ class Layout extends React.Component {
         <ContentWrapper footerComponent={footerComponent}>
           {children}
         </ContentWrapper>
-        <Menu currPage={currPage} isOpen={menuOpen} />
+        <Menu
+          currPage={currPage}
+          isOpen={menuOpen}
+          fullScreenMenu={fullScreenMenu}
+        />
       </div>
     );
   }

@@ -10,7 +10,7 @@ const BioContent = ({ footerComponent }) => (
       </span>
     </div>
     <p className="bio-paragraph">
-      <span className="greeting">Hi,</span> my name is{' '}
+      <span className="greeting">Hello!</span> my name is{' '}
       <span className="emphasized-text">Tony Pettigrew</span> I'm a web
       developer specializing in full stack{' '}
       <span className="emphasized-text">JavaScript</span>
