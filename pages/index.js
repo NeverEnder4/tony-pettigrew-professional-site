@@ -5,8 +5,6 @@ import LowerLanding from '../components/LowerLanding/LowerLanding';
 // seed data from static folder
 import iconArray from '../static/seed-data/icons';
 
-import '../scss/pages/index.scss';
-
 // default state object
 const defaultState = {
   currentIconIndex: 0,

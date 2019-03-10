@@ -5,8 +5,6 @@ import WorksList from '../components/WorksList/WorksList';
 
 import api from '../api/api';
 
-import '../scss/pages/works.scss';
-
 const works = ({ currPage, works }) => (
   <Layout currPage={currPage}>
     <WorksList works={works} />

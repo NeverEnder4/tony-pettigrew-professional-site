@@ -6,8 +6,6 @@ import ThoughtsList from '../components/ThoughtsList/ThoughtsList';
 import api from '../api/api';
 import { sortThoughtsByDate } from '../utils/utils';
 
-import '../scss/pages/thoughts.scss';
-
 const thoughts = ({ currPage, thoughts }) => {
   return (
     <Layout currPage={currPage}>

@@ -4,8 +4,6 @@ import ThoughtPost from '../components/ThoughtPost/ThoughtPost';
 
 import api from '../api/api';
 
-import '../scss/pages/thought.scss';
-
 const thought = ({ thought, currPage }) => {
   return (
     <Layout currPage={currPage}>
