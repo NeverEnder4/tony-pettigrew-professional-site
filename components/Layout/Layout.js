@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Header from './Header/Header';
 import Menu from './Menu/Menu';
 import Footer from './Footer/Footer';
@@ -92,20 +93,39 @@ class Layout extends React.Component {
       />
     );
     return (
-      <div className="layout" onClick={this.menuButtonClickHandler}>
-        <Header
-          menuOpen={menuOpen}
-          menuButtonClickHandler={this.menuButtonClickHandler}
-        />
-        <ContentWrapper footerComponent={footerComponent}>
-          {children}
-        </ContentWrapper>
-        <Menu
-          currPage={currPage}
-          isOpen={menuOpen}
-          fullScreenMenu={fullScreenMenu}
-        />
-      </div>
+      <React.Fragment>
+        <Head>
+          <meta charSet="UTF-8" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
+          <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+
+          <title>
+            Tony Pettigrew | Web Developer | UX/UI Designer | Creative Solutions
+            Expert
+          </title>
+          <link
+            href="https://fonts.googleapis.com/css?family=Rubik:400,500,700,900"
+            rel="stylesheet"
+          />
+        </Head>
+        <div className="layout" onClick={this.menuButtonClickHandler}>
+          <Header
+            menuOpen={menuOpen}
+            menuButtonClickHandler={this.menuButtonClickHandler}
+          />
+          <ContentWrapper footerComponent={footerComponent}>
+            {children}
+          </ContentWrapper>
+          <Menu
+            currPage={currPage}
+            isOpen={menuOpen}
+            fullScreenMenu={fullScreenMenu}
+          />
+        </div>
+      </React.Fragment>
     );
   }
 }

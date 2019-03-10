@@ -45,7 +45,7 @@ const LowerLanding = ({
           </ul>
         </nav>
 
-        <span>Pull Me</span>
+        {/* <span>Pull Me</span> */}
         <img
           src="/static/svg/sphere.svg"
           alt="sphere"
