@@ -1,10 +1,10 @@
 import fetch from 'isomorphic-unfetch';
-import Error from 'next/error';
 
 import Layout from '../components/Layout/Layout';
 import ThoughtsList from '../components/ThoughtsList/ThoughtsList';
 
 import api from '../api/api';
+import { sortThoughtsByDate } from '../utils/utils';
 
 import '../scss/pages/thoughts.scss';
 
@@ -18,9 +18,11 @@ const thoughts = ({ currPage, thoughts }) => {
 
 thoughts.getInitialProps = async ({ pathname }) => {
   const response = await api.getData('http://localhost:3000/posts/all', fetch);
+
+  const sortedThoughts = sortThoughtsByDate(response.data.thoughts);
   return {
     currPage: pathname,
-    thoughts: response.data.thoughts,
+    thoughts: sortedThoughts,
   };
 };
 

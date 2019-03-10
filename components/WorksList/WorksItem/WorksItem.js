@@ -12,7 +12,6 @@ class WorksItem extends React.Component {
 
   enterHandler = () => {
     this.setState(() => ({ itemEntered: true }));
-    console.log('Entered!');
   };
   render() {
     const { item } = this.props;
@@ -21,16 +20,16 @@ class WorksItem extends React.Component {
     return (
       <Waypoint onEnter={this.enterHandler} bottomOffset="55%">
         <li className={`works-gallery-item ${enteredClass}`}>
-          <img className="item-image" src={item.imgUrl} alt={item.imgAlt} />
+          <img className="item-image" src={item.img_src} alt={item.img_alt} />
           <div className="text-content">
             {item.link ? (
               <a
                 className="item-link"
-                href={item.href}
+                href={item.link}
                 rel="noreferrer"
                 target="_blank"
               >
-                <h2 className="item-title">{item.title}</h2>
+                <h2 className="item-title">{item.name}</h2>
 
                 <img
                   src="/static/svg/open-new-window.svg"
@@ -39,12 +38,12 @@ class WorksItem extends React.Component {
                 />
               </a>
             ) : (
-              <h2 className="item-title">{item.title}</h2>
+              <h2 className="item-title">{item.name}</h2>
             )}
 
             <div className="item-info">
               <div className="stats">
-                <h3 className="item-type">{item.style}</h3>
+                <h3 className="item-type">{item.type}</h3>
                 <p className="item-tech">{item.tech}</p>
               </div>
               <div className="item-description">

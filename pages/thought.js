@@ -6,22 +6,24 @@ import api from '../api/api';
 
 import '../scss/pages/thought.scss';
 
-const thought = ({ thought }) => {
+const thought = ({ thought, currPage }) => {
   return (
-    <Layout>
+    <Layout currPage={currPage}>
       <ThoughtPost thought={thought} />
     </Layout>
   );
 };
 
-thought.getInitialProps = async ({ query }) => {
+thought.getInitialProps = async ({ query, pathname }) => {
   const { slug } = query;
+  const currPage = `${pathname}s`;
   const response = await api.getData(
     `http://localhost:3000/post/${slug}`,
     fetch,
   );
 
   return {
+    currPage: currPage,
     thought: response.thoughts[0],
   };
 };

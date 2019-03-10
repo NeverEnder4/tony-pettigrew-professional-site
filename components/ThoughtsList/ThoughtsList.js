@@ -13,9 +13,9 @@ const ThoughtsList = ({ footerComponent, thoughts }) => {
       </div>
       <ul className="thoughts-list">
         {thoughts
-          ? thoughts.map(thought => (
-              <ThoughtsItem key={thought.slug} thought={thought} />
-            ))
+          ? thoughts.map(thought => {
+              return <ThoughtsItem key={thought.slug} thought={thought} />;
+            })
           : 'Loading...'}
       </ul>
       {footerComponent}

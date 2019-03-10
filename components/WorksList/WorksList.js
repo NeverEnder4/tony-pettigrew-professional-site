@@ -1,18 +1,18 @@
 import WorksItem from './WorksItem/WorksItem';
 
-import itemsArray from '../../static/seed-data/works';
+// import itemsArray from '../../static/seed-data/works';
 
 import './WorksList.scss';
 
-const WorksList = ({ footerComponent }) => (
+const WorksList = ({ footerComponent, works }) => (
   <section className="works-list">
     <div className="works-container">
       <span className="title-offset">
         <h1 className="works-title">WORKS</h1>
       </span>
       <ul className="works-gallery">
-        {itemsArray.map(item => (
-          <WorksItem key={item.title} item={item} />
+        {works.map(item => (
+          <WorksItem key={item.name} item={item} />
         ))}
       </ul>
     </div>
