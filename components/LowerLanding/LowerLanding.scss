@@ -6,7 +6,7 @@
   transform-origin: center top;
   visibility: hidden;
   position: relative;
-  border-right: $landing-border;
+  // border-right: $landing-border;
   width: 50%;
   height: 35vh;
   min-height: 100px;
@@ -85,30 +85,30 @@
 }
 
 // sphere image and pull me span
-.sphere-icon {
-  transform: scale(0);
-  width: 55px;
-  position: absolute;
-  bottom: -43px;
-  right: -29px;
-  @media (min-width: 1280px) {
-    width: 70px;
-    bottom: -55px;
-    right: -36.8px;
-  }
-  animation: sphere-scale 200ms cubic-bezier(0.175, 0.885, 0.32, 1.475) forwards
-    700ms;
-}
+// .sphere-icon {
+//   transform: scale(0);
+//   width: 55px;
+//   position: absolute;
+//   bottom: -43px;
+//   right: -29px;
+//   @media (min-width: 1280px) {
+//     width: 70px;
+//     bottom: -55px;
+//     right: -36.8px;
+//   }
+//   animation: sphere-scale 200ms cubic-bezier(0.175, 0.885, 0.32, 1.475) forwards
+//     700ms;
+// }
 
-@keyframes sphere-scale {
-  from {
-    transform: scale(0);
-  }
+// @keyframes sphere-scale {
+//   from {
+//     transform: scale(0);
+//   }
 
-  to {
-    transform: scale(1);
-  }
-}
+//   to {
+//     transform: scale(1);
+//   }
+// }
 
 // pull me text
 .vertical-line span {

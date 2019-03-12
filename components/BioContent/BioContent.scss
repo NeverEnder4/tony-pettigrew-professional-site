@@ -1,5 +1,11 @@
 @import '../../scss/abstractions/abstractions';
 
+.bio-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .bio-content {
   position: relative;
   right: 2rem;

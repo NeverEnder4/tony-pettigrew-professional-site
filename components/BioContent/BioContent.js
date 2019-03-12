@@ -3,7 +3,7 @@ import Link from 'next/link';
 import './BioContent.scss';
 
 const BioContent = ({ footerComponent }) => (
-  <React.Fragment>
+  <div className="bio-content-container">
     <section className="bio-content">
       <div className="section-title">
         <span className="section-title-bar">
@@ -33,7 +33,7 @@ const BioContent = ({ footerComponent }) => (
       </p>
     </section>
     {footerComponent}
-  </React.Fragment>
+  </div>
 );
 
 export default BioContent;

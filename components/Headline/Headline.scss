@@ -13,37 +13,48 @@
   @media (min-width: 1280px) {
     width: 433px;
   }
+  @media (min-height: 1000px) {
+    margin-top: 12vh;
+  }
 }
 
 .headline-row {
+  perspective: 1000px;
   overflow: hidden;
   transform-origin: center top;
-  transform: scaleY(0);
-  border-left: $landing-border;
-  border-top: $landing-border;
-  border-right: $landing-border;
+  opacity: 0;
+  transform: translateX(-50px);
+  // border-left: $landing-border;
+  // border-top: $landing-border;
+  // border-right: $landing-border;
   display: flex;
+  &:first-child {
+    border-top: none;
+  }
   &:last-child {
     position: relative;
-    border-bottom: $landing-border;
+    // border-bottom: $landing-border;
   }
   &.first {
-    animation: scale-in 300ms cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+    animation: scale-in 500ms cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
   }
   &.middle {
-    animation: scale-in 300ms cubic-bezier(0.215, 0.61, 0.355, 1) forwards 100ms;
+    animation: scale-in 500ms cubic-bezier(0.215, 0.61, 0.355, 1) forwards 100ms;
   }
   &.last {
-    animation: scale-in 300ms cubic-bezier(0.215, 0.61, 0.355, 1) forwards 200ms;
+    animation: scale-in 500ms cubic-bezier(0.215, 0.61, 0.355, 1) forwards 200ms;
   }
 }
 
 @keyframes scale-in {
   from {
-    transform: scaleY(0);
+    opacity: 0;
+    transform: translateX(-50px);
   }
   to {
-    transform: scaleY(1);
+    opacity: 1;
+
+    transform: translateX(0);
   }
 }
 
