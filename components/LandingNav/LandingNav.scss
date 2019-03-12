@@ -1,0 +1,47 @@
+.landing-nav {
+  position: absolute;
+  width: calc(100% - 2rem);
+  height: calc(100% - 2rem);
+  left: 1rem;
+  top: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+
+  &__item.works {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform-origin: center center;
+    transform: translateX(-50%);
+  }
+
+  &__item.thoughts {
+    position: absolute;
+    right: -4.5rem;
+    top: 50%;
+    transform-origin: center center;
+    transform: translateY(-50%) rotate(-90deg);
+    @media (min-width: 1000px) {
+      right: -7.5rem;
+    }
+  }
+
+  &__item.tacoboutit {
+    position: absolute;
+    left: 50%;
+    bottom: 0.9rem;
+    transform-origin: center center;
+    transform: translateX(-50%);
+  }
+
+  &__item.about {
+    position: absolute;
+    left: -4rem;
+    top: 50%;
+    transform-origin: center center;
+    transform: translateY(-50%) rotate(90deg);
+    @media (min-width: 1000px) {
+      left: -7rem;
+    }
+  }
+}

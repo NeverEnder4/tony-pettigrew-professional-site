@@ -1,7 +1,7 @@
 @import '../../../scss/abstractions/abstractions';
 
 .high-light-link {
-  @include font-style($font-size-xm, $color-black);
+  @include font-style($font-size-md, $color-black);
   backface-visibility: hidden;
   text-decoration: none;
   position: relative;
@@ -9,10 +9,19 @@
   transform: translateY(-30px);
   opacity: 0;
   visibility: hidden;
+  text-transform: uppercase;
   transition: color 200ms cubic-bezier(0.215, 0.61, 0.355, 1) 30ms;
 
   animation: social-link-text-slide 200ms cubic-bezier(0.075, 0.82, 0.165, 1)
     800ms forwards;
+
+  @media (min-width: 1000px) {
+    font-size: $font-size-xm;
+  }
+
+  @media (min-width: 1600px) {
+    font-size: $font-size-lg;
+  }
   &:hover,
   &:focus {
     color: $color-secondary;
@@ -27,12 +36,16 @@
     height: 70%;
     background-color: $color-secondary;
     left: 1px;
-    top: 15px;
+    top: 12px;
     z-index: -1;
     transition: all 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
     animation: social-link-bg-scale 200ms cubic-bezier(0.47, 0, 0.745, 0.715)
       forwards 1000ms;
+    @media (min-width: 1200px) {
+      top: 17px;
+    }
   }
+
   &:hover::before,
   &:focus::before {
     width: 0;

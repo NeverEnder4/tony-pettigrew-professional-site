@@ -1,14 +1,14 @@
-import PageWrapper from '../components/PageWrapper/PageWrapper';
-import Headline from '../components/Headline/Headline';
-import LowerLanding from '../components/LowerLanding/LowerLanding';
-
+import NextHead from '../components/NextHead/NextHead';
+import LandingNav from '../components/LandingNav/LandingNav';
+import LandingHeader from '../components/LandingHeader/LandingHeader';
 // seed data from static folder
 import iconArray from '../static/seed-data/icons';
+
+import '../scss/pages/index.scss';
 
 // default state object
 const defaultState = {
   currentIconIndex: 0,
-  mouseDownOnSphere: false,
 };
 
 class index extends React.Component {
@@ -17,66 +17,46 @@ class index extends React.Component {
     this.state = defaultState;
   }
 
-  componentDidMount() {
-    this.cycleIconsAtInterval(4000, iconArray);
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.cycleIconsAtInterval);
-  }
+  // componentDidMount() {
+  //   this.cycleIconsAtInterval(4000, iconArray);
+  // }
 
   // loop the index back to 0 if it is the terminal index
-  loopIndex(array, index) {
-    // validate arguments
-    const arrayLength = array.length;
-    if (typeof arrayLength !== 'number' || typeof index !== 'number') return;
-    if (index >= arrayLength) return;
+  // loopIndex(array, index) {
+  //   // validate arguments
+  //   const arrayLength = array.length;
+  //   if (typeof arrayLength !== 'number' || typeof index !== 'number') return;
+  //   if (index >= arrayLength) return;
 
-    if (index === arrayLength - 1) return 0;
-    else return ++index;
-  }
+  //   if (index === arrayLength - 1) return 0;
+  //   else return ++index;
+  // }
 
   // cycle through all the icons with a delay of interval
-  cycleIconsAtInterval = (interval, array) => {
-    // validate args
-    if (!interval || !array) return undefined;
-    if (typeof interval !== 'number') return NaN;
-    setInterval(() => {
-      const { currentIconIndex } = this.state;
-      const nextIconIndex = this.loopIndex(array, currentIconIndex);
-      this.setState(() => ({
-        currentIconIndex: nextIconIndex,
-      }));
-    }, interval);
-  };
+  // cycleIconsAtInterval = (interval, array) => {
+  //   // validate args
+  //   if (!interval || !array) return undefined;
+  //   if (typeof interval !== 'number') return NaN;
+  //   setInterval(() => {
+  //     const { currentIconIndex } = this.state;
+  //     const nextIconIndex = this.loopIndex(array, currentIconIndex);
+  //     this.setState(() => ({
+  //       currentIconIndex: nextIconIndex,
+  //     }));
+  //   }, interval);
+  // };
 
-  onSphereMouseDownHandler = e => {
-    if (!e.target.classList.contains('sphere-icon')) return;
-    this.setState(prevState => ({
-      mouseDownOnSphere: !prevState.mouseDownOnSphere,
-    }));
-  };
-
-  onSphereMouseUpHandler = e => {
-    if (!this.state.mouseDownOnSphere) return;
-
-    this.setState(prevState => ({
-      mouseDownOnSphere: !prevState.mouseDownOnSphere,
-    }));
-  };
   render() {
-    const { currentIconIndex, mouseDownOnSphere } = this.state;
-    const icon = iconArray[currentIconIndex];
-    const mouseDownOnSphereClass = mouseDownOnSphere ? 'mouse-down' : '';
+    // const { currentIconIndex } = this.state;
+    // const icon = iconArray[currentIconIndex];
     return (
-      <PageWrapper>
-        <Headline icon={icon} />
-        <LowerLanding
-          onSphereMouseDownHandler={this.onSphereMouseDownHandler}
-          onSphereMouseUpHandler={this.onSphereMouseUpHandler}
-          mouseDownOnSphereClass={mouseDownOnSphereClass}
-        />
-      </PageWrapper>
+      <React.Fragment>
+        <NextHead />
+        <main className="landing-page-wrapper">
+          <LandingHeader />
+          <LandingNav />
+        </main>
+      </React.Fragment>
     );
   }
 }

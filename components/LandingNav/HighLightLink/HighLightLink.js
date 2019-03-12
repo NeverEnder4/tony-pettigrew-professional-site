@@ -1,9 +1,10 @@
+import Link from 'next/link';
 import './HighLightLink.scss';
 
 const HighLightLink = ({ href, text }) => (
-  <a href={href} rel="noreferrer" className="high-light-link">
-    {text}
-  </a>
+  <Link href={href}>
+    <a className="high-light-link">{text}</a>
+  </Link>
 );
 
 export default HighLightLink;
