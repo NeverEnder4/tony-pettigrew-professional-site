@@ -7,13 +7,9 @@
   position: relative;
   transform-origin: center;
   transform: translateY(-30px);
-  opacity: 0;
-  visibility: hidden;
+
   text-transform: uppercase;
   transition: color 200ms cubic-bezier(0.215, 0.61, 0.355, 1) 30ms;
-
-  animation: social-link-text-slide 200ms cubic-bezier(0.075, 0.82, 0.165, 1)
-    800ms forwards;
 
   @media (min-width: 1000px) {
     font-size: $font-size-xm;
@@ -53,18 +49,6 @@
   }
 }
 
-@keyframes social-link-text-slide {
-  from {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-}
 @keyframes social-link-bg-scale {
   from {
     transform: scaleX(0);

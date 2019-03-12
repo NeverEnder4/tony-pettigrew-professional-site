@@ -7,4 +7,10 @@
   height: 100vh;
   min-height: 640px;
   min-width: 320px;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  @media (min-height: 640px) {
+    overflow-y: hidden;
+  }
 }
