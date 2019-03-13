@@ -1,3 +1,5 @@
+import HeaderIcon from './HeaderIcon/HeaderIcon';
+
 import './LandingHeader.scss';
 
 const LandingHeader = () => (
@@ -7,11 +9,9 @@ const LandingHeader = () => (
       <span className="landing-header__title--weight-black">websites</span>
       {` `}that
     </h1>
-    <img
-      className="landing-header__icon"
-      src="/static/svg/champagne-logo-lg.svg"
-      alt="champagne bottle popping icon"
-    />
+
+    <HeaderIcon />
+
     <ul className="landing-header__social-links-container">
       <li>
         <a href="#">Git</a>

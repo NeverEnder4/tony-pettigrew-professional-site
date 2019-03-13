@@ -5,7 +5,7 @@ const LandingNav = () => (
   <nav className="landing-nav">
     <ul className="landing-nav__list">
       <li className="landing-nav__item about">
-        <HighLightLink href="/biographique" text="About Me" />
+        <HighLightLink href="/biographique" text="Biographique" />
       </li>
       <li className="landing-nav__item works">
         <HighLightLink href="/works" text="Works" />

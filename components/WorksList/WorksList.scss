@@ -6,7 +6,6 @@
   align-items: center;
   position: relative;
   right: 2rem;
-  width: calc(100vw - 1.7rem);
   position: relative;
 
   background-color: #efefef;
@@ -14,8 +13,7 @@
   background-attachment: fixed;
   background-size: cover;
   @media (min-width: 1200px) {
-    width: 100%;
-    right: 2rem;
+    width: 100vw;
   }
 }
 

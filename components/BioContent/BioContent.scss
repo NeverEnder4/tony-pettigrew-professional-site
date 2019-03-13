@@ -1,5 +1,11 @@
 @import '../../scss/abstractions/abstractions';
 
+.bio-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .bio-content-container {
   display: flex;
   flex-direction: column;
@@ -9,6 +15,9 @@
 .bio-content {
   position: relative;
   right: 2rem;
+  width: 100vw;
+  padding: 0 2rem;
+  box-sizing: border-box;
   @media (min-width: 1200px) {
     position: relative;
     width: calc(100% - 4rem);
@@ -71,7 +80,9 @@
 }
 
 .greeting {
+  text-align: left;
   display: block;
+  text-transform: uppercase;
   font-family: $font-family-karla;
   font-size: 3rem;
   font-weight: $font-weight-bold;
@@ -92,6 +103,7 @@
   }
   @media (min-width: 1280px) {
     margin-top: 10rem;
+    margin-bottom: 4rem;
   }
   @media (min-width: 1440px) {
     font-size: $font-size-xxl;
@@ -99,6 +111,8 @@
 }
 
 .bio-paragraph {
+  text-align: right;
+
   font-size: $font-size-sm;
   font-weight: $font-weight-medium;
   line-height: $line-height-lg;
@@ -133,8 +147,12 @@
 }
 
 .emphasized-text {
+  text-transform: uppercase;
+  font-weight: $font-weight-black;
+  padding-right: 1rem;
+  border-right: 3px solid $color-secondary;
   font-family: $font-family-rubik;
-  color: $color-secondary;
+  color: $color-black;
   font-size: 2rem;
   margin: 0 2px;
   @media (min-width: 375px) {
@@ -148,6 +166,8 @@
 }
 
 .white-link {
+  text-transform: uppercase;
+
   text-decoration: none;
   margin: 0 4px;
 
