@@ -35,7 +35,6 @@ const BioContent = ({ footerComponent }) => (
         </p>
       </section>
     </div>
-    {footerComponent}
   </div>
 );
 

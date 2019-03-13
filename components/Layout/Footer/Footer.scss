@@ -6,7 +6,7 @@
   align-items: center;
   height: 50px;
   padding: 1rem;
-  background-color: $color-primary;
+  background-color: transparent;
   width: 100%;
   @media (min-width: 1200px) {
     align-self: center;
@@ -49,8 +49,6 @@
   }
 
   & .contact-links {
-    padding: 0 2rem;
-
     display: none;
   }
 
@@ -62,9 +60,9 @@
 
     & .contact-links {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center;
-      width: 100%;
+      width: 90%;
 
       @media (min-width: 600px) {
         width: 80%;

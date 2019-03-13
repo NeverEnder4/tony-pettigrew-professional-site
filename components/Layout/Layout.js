@@ -86,12 +86,12 @@ class Layout extends React.Component {
   render() {
     const { menuOpen, fullScreenMenu, contactOpen } = this.state;
     const { children, currPage } = this.props;
-    const footerComponent = (
-      <Footer
-        contactClickHandler={this.contactClickHandler}
-        contactOpen={contactOpen}
-      />
-    );
+    // const footerComponent = (
+    //   <Footer
+    //     contactClickHandler={this.contactClickHandler}
+    //     contactOpen={contactOpen}
+    //   />
+    // );
     return (
       <React.Fragment>
         <NextHead />
@@ -100,9 +100,14 @@ class Layout extends React.Component {
             menuOpen={menuOpen}
             menuButtonClickHandler={this.menuButtonClickHandler}
           />
-          <ContentWrapper footerComponent={footerComponent}>
+          <ContentWrapper>
             {children}
+            <Footer
+              contactClickHandler={this.contactClickHandler}
+              contactOpen={contactOpen}
+            />
           </ContentWrapper>
+
           <Menu
             currPage={currPage}
             isOpen={menuOpen}

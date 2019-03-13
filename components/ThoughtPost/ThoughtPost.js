@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 import './ThoughtPost.scss';
 
-const ThoughtPost = ({ footerComponent, thought }) => (
+const ThoughtPost = ({ thought }) => (
   <article className="thought-post">
     <div className="section-title thoughts">
       <span className="section-title-bar">
@@ -49,8 +49,6 @@ const ThoughtPost = ({ footerComponent, thought }) => (
         </Link>
       </div>
     </div>
-
-    {footerComponent}
   </article>
 );
 

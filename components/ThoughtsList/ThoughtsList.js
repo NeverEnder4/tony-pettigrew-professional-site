@@ -18,7 +18,6 @@ const ThoughtsList = ({ footerComponent, thoughts }) => {
             })
           : 'Loading...'}
       </ul>
-      {footerComponent}
     </section>
   );
 };

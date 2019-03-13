@@ -17,7 +17,6 @@ const WorksList = ({ footerComponent, works }) => (
           ))}
         </ul>
       </div>
-      {footerComponent}
     </section>
   </React.Fragment>
 );
